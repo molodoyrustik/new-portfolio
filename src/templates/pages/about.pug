@@ -1,0 +1,71 @@
+extends ../layouts/main-layout.pug
+
+block title
+  title Главная
+
+block header
+  a(href="#").down-arrow
+    img(src="/images/icons/arrow_down.svg", alt="").down-arrow__icon
+  .hero__title
+    img(src="/images/icons/portfolio_header.svg", alt="").section-title
+    .user.hero__user-block
+      .user__photo
+        .user__photo-avatar
+          picture
+            img(src="/images/content/avatar.jpg" srcset='/images/content/avatar@2x.jpg 2x', alt="").user__photo-img
+      .user__name Руслан Багаутдинов
+      .user_desc Личный сайт веб разработчика
+  .hero__triangle-wrap
+    svg.triangle.triangle--fill-white(viewbox='0 0 1000 100', preserveaspectratio='none')
+          polygon(points='0,0 0,100 1000,100')
+    svg.triangle.triangle--fill-beige(viewbox='0 0 1000 100', preserveaspectratio='none')
+          polygon(points='0,100 1000,100 1000,0')
+
+block content
+  main.about-page
+    section.section.about
+      .about__left
+        +title('Обо мне', 'about-header.png', 'about__section-title')
+        .user-about
+          .user-about__picture
+            img.user-about__img(src="images/content/avatar2.png", alt="")
+          .subtitle.user-about__title Кто я
+          .user-about__text
+            p Я веб разработчик из Уфы. Мне 19 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+            p Я веб разработчик из Уфы. Мне 19 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+            
+      .about__right
+        .about-data
+          .about-data__descri ption.about-user-info
+            .about-user-info__title
+              .subtitle.about-data__subtitle Чем я могу быть вам полезен
+            .about-user-info__text 
+              p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+          .about-data__content
+            ul.skills
+                each skill in skills
+                  each skillsArray, skillName in skill
+                    li.skills__item
+                      .skill-section
+                        .skill-section__title= skillName
+                        ul.skill-section__list
+                          each skillTitle in skillsArray
+                            li.skills-section__item
+                              .skill
+                                svg.skill__circle(viewbox='0 0 110 110')
+                                  circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+                                  circle.circle__second.circle-100(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                                span.skill__name= skillTitle
+    
+    section.section.map
+      .contacts.map__contacts
+        .subtitle.map__subtitle Контакты
+        ul.contacts__list
+          li.contacts__item
+            a.contacts__link.contacts__link--skype skype_kdn
+          li.contacts__item
+            a.contacts__link.contacts__link--envelope molodoybaja@gmail.com
+          li.contacts__item
+            a.contacts__link.contacts__link--phone +7 931 200 93 24
+          li.contacts__item
+            a.contacts__link.contacts__link--map-marker г.Уфа, ул. Свердлова, д.1

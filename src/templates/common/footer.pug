@@ -1,0 +1,23 @@
+footer.footer
+	.footer__wrapper
+		.footer_row
+			.footer__left
+				.footer__menu
+					ul.footer__menu-list
+						each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
+							li.footer__menu-item
+								a(href="#").footer__menu-link= item
+			.footer__right
+					ul.footer__socials
+						each item in ['vk', 'gh', 'in']
+							li.footer__socials-item
+								a(href="" class=`footer__socials-link footer__socials-link--${item}`)= item
+		.footer_row
+			.footer__left
+				p.footer__quote «Если беспорядок на столе означает беспорядок в голове, то что же тогда означает пустой стол?»
+			.footer__right
+				p.footer__right-text © Руслан Багаутдинов | I boldly go where my dream is | 2016
+				
+
+script(src='./js/foundation.js' defer)
+script(src='./js/main.js' defer)

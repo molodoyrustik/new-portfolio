@@ -1,0 +1,30 @@
+// variables
+$white: #efeee9;
+$beige: #eeebdf;
+$main-font-color: #373e42;
+$subtitle-color: #455a64;
+$white-green: #00bfa5;
+$green: #009688;
+
+// fonts
+@import "_misc/font-roboto";
+@import "_misc/font-awesome";
+@import "_misc/font-bernier";
+
+// layout
+@import "_misc/mixins";
+@import "_misc/adjustment";
+
+// blocks
+@import "blocks/socials";
+@import "blocks/menu";
+@import "blocks/user";
+@import "blocks/button";
+@import "blocks/subtitle";
+@import "blocks/checkbox-group";
+@import "blocks/radio-group";
+@import "blocks/login";
+@import "blocks/flip-card";
+
+// welcome-page
+@import "blocks/welcome";

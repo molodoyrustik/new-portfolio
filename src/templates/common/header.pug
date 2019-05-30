@@ -1,0 +1,17 @@
+section.section.hero
+  .hero__top
+    .socials
+      ul.socials__list
+        each item in [{name: 'vkontakte', width: '31', height: '17'}, {name: 'github', width: '26', height: '22'}, {name: 'instagram', width: '24', height: '22'}]
+          li.socials__item
+            a(href="#" class=` socials__link socials__link--${item.name}`)
+              span.socials__text= item.name
+              svg.icon.socials__icon(width=`${item.width}` height=`${item.height}`)
+                use(xlink:href=`#${item.name}`)
+    a(href="#").hamburger
+      svg.user-block__icon(width='40px', height='35px').down-arrow__icon
+        use(xlink:href='#hamburger')
+  .hero__bg
+    img(src="images/bg/portfolio.jpg", alt="").header__bg-img
+  block header
+      

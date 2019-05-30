@@ -1,0 +1,45 @@
+extends ../layouts/main-layout.pug
+
+block title
+  title Works
+
+block header
+  a(href="#").down-arrow
+    img(src="images/icons/arrow_down.svg", alt="").down-arrow__icon
+  .hero__title
+    img(src="images/icons/portfolio_header.svg", alt="").section-title
+    .user.hero__user-block
+      .user__photo
+        .user__photo-avatar
+            img(src="images/content/avatar2.png", alt="").user__photo-img
+      .user__name Руслан Багаутдинов
+      .user_desc Личный сайт веб разработчика
+  .hero__triangle-wrap
+    svg.triangle.triangle--fill-white(viewbox='0 0 1000 100', preserveaspectratio='none')
+          polygon(points='0,0 0,100 1000,100')
+    svg.triangle.triangle--fill-beige(viewbox='0 0 1000 100', preserveaspectratio='none')
+          polygon(points='0,100 1000,100 1000,0')
+
+block content
+  section.section.works
+    .works__title-wrapper
+      +title('Мои работы', 'works-header.png', 'works__title')
+    .slider
+      .slider__display
+        .slider__window
+          img(src='./images/works/1.png').slider__img
+      
+      .slider__desk
+        .slider__desk-wrapper
+          .title.slider__desk-title Сайт школы онлайн образования
+          .slider__desk-technologies HTML, CSS, JAVASCRIPT
+          .slider__show-btn Посмотреть сайт
+      
+
+      .slider__controls
+        a.slider__controls-item.slider__controls-item_prev(href='#')
+          img(src='images/works/4.png', class='slider__controls-img' alt='')
+        a.slider__controls-item.slider__controls-item_next(href='#')
+          img(src='images/works/2.png', class='slider__controls-img' alt='')
+      
+     
