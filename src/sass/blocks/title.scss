@@ -1,0 +1,32 @@
+.title {
+  position: relative;
+  display: inline-block;
+  padding-top: 14px;
+  padding-right: 48px;
+  padding-bottom: 14px;
+  padding-left: 48px;
+  font-size: 35px;
+  line-height: 42px;
+  @include bernier();
+  color: $main-font-color;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &:after, &:before {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 5px;
+    @include centered('y');
+    background: rgba($main-font-color, .2);
+  }
+
+  &:after {
+    right: 5px;
+  }
+
+  &:before {
+    left: 5px;
+  }
+}

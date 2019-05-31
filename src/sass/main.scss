@@ -21,10 +21,20 @@ $green: #009688;
 @import "blocks/user";
 @import "blocks/button";
 @import "blocks/subtitle";
+@import "blocks/title";
 @import "blocks/checkbox-group";
 @import "blocks/radio-group";
 @import "blocks/login";
 @import "blocks/flip-card";
+@import "blocks/hero";
+@import "blocks/hamburger";
+@import "blocks/triangle";
+@import "blocks/section";
+@import "blocks/user-about";
+@import "blocks/about-data";
+@import "blocks/skills";
 
 // welcome-page
 @import "blocks/welcome";
+// about-page
+@import "blocks/about";

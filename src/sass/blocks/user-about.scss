@@ -1,0 +1,35 @@
+.user-about {
+
+}
+
+.user-about__photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 27px;
+}
+
+.user-about__img {
+  max-width: 320px;
+}
+
+.user-about__title {
+  margin-bottom: 10px;
+}
+
+.user-about__text {
+  padding-left: 10px;
+  padding-right: 10px;
+  @include roboto('regular');
+  font-size: 14px;
+  line-height: 24px;
+  color: #455a64;
+  text-align: left;
+
+  P {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

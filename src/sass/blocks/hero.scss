@@ -1,0 +1,88 @@
+.hero {
+  width: 100%;
+  min-height: 568px;
+  height: 100vh;
+}
+
+.hero__top {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.hero__socials {
+
+}
+
+.hero__socials-icon {
+  display: block;
+  fill: rgba(#ffffff, 0.5);
+
+  &:hover {
+    fill: #ffffff;
+  }
+}
+
+.hero__bg {
+  min-height: 568px;
+  height: 100vh;
+  background-image: url('/images/bg/portfolio.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero__block {
+  position: relative;
+  width: 248px;
+  @include centered('both');
+}
+
+.hero__down-arrow {
+  display: block;
+  @include centered('x');
+  bottom: 50px;
+}
+
+.hero__arrow-icon {
+  display: block;
+  fill: rgba(#ffffff, 0.7);
+}
+
+.hero__portfolio-bg {
+  display: none;
+  @include centered('both');
+  fill: rgba(#ffffff, 0.06);
+  z-index: -1;
+  @include desktop {
+    display: block;
+  }
+}
+
+.hero__user {
+  
+}
+
+.hero__user-name {
+  color: #ffffff;
+  margin-bottom: 3.5px;
+}
+
+.hero__user-desc {
+  margin-bottom: 0;
+  @include roboto('light');
+  color: rgba(#ffffff, 0.8);
+}
+
+.hero__triangle-wrap {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
