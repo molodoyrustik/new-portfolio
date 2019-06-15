@@ -1,7 +1,16 @@
 .hero {
+  position: relative;
   width: 100%;
   min-height: 568px;
   height: 100vh;
+
+  @include tablet {
+    min-height: 505px;
+  }
+
+  @include desktop {
+    min-height: 600px;
+  }
 }
 
 .hero__top {
@@ -15,6 +24,17 @@
   padding-right: 10px;
   box-sizing: border-box;
   z-index: 2;
+
+  @include tablet {
+    padding-top: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  @include desktop {
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
 }
 
 .hero__socials {
@@ -39,16 +59,23 @@
   background-position: center;
 }
 
-.hero__block {
-  position: relative;
-  width: 248px;
-  @include centered('both');
-}
-
 .hero__down-arrow {
   display: block;
   @include centered('x');
   bottom: 50px;
+
+  @include desktop {
+    bottom: 72px;
+  }
+}
+
+.hero__block {
+  position: relative;
+  width: 250px;
+  @include centered('both');
+  @include tablet {
+    width: 370px;
+  }
 }
 
 .hero__arrow-icon {
@@ -70,9 +97,23 @@
   
 }
 
+.hero__photo {
+  @include tablet {
+    margin-bottom: 20px;
+  }
+  @include desktop {
+    margin-bottom: 25px;
+  }
+}
+
 .hero__user-name {
   color: #ffffff;
   margin-bottom: 3.5px;
+  @include tablet {
+    margin-bottom: 0;
+    font-size: 35px;
+    line-height: 45px;
+  } 
 }
 
 .hero__user-desc {

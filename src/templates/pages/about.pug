@@ -11,7 +11,7 @@ block header
     svg.icon.hero__portfolio-bg(width="1175.495" height="313.961")
       use(xlink:href="#portfolio-header")
     .user.hero__user
-      .user__photo
+      .user__photo.hero__photo
         .user__photo-avatar
           picture
             img(src="/images/content/avatar.jpg" srcset='/images/content/avatar@2x.jpg 2x', alt="").user__photo-img
@@ -32,7 +32,7 @@ block content
           +title('Обо мне', 'about-header.png', 'about__section-title')
         .user-about
           .user-about__photo
-            img.user-about__img(src="images/content/avatar.jpg", alt="")
+            img.user-about__img(src="images/content/avatar2.jpg", alt="")
           .subtitle.user-about__title Кто я
           .user-about__text
             p Я веб разработчик из Уфы. Мне 19 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.Я веб разработчик из Уфы. Мне 19 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
@@ -65,10 +65,22 @@ block content
         .subtitle.map__subtitle Контакты
         ul.contacts__list
           li.contacts__item
-            a.contacts__link.contacts__link--skype skype_kdn
+            a(href="#").contacts__link.contacts__link--skype
+              svg.icon.contacts__icon(width='24' height='24')
+                use(xlink:href="#skype")
+              span skype_kdn
           li.contacts__item
-            a.contacts__link.contacts__link--envelope molodoybaja@gmail.com
+            a(href="#").contacts__link.contacts__link--envelope
+              svg.icon.contacts__icon(width='22' height='17')
+                use(xlink:href="#envelope")
+              span molodoybaja@gmail.com
           li.contacts__item
-            a.contacts__link.contacts__link--phone +7 931 200 93 24
+            a(href="#").contacts__link.contacts__link--phone
+              svg.icon.contacts__icon(width='19' height='19')
+                use(xlink:href="#phone")
+              span +7 931 200 93 24
           li.contacts__item
-            a.contacts__link.contacts__link--map-marker г.Уфа, ул. Свердлова, д.1
+            a(href="#").contacts__link.contacts__link--map-marker
+              svg.icon.contacts__icon(width='15' height='22')
+                use(xlink:href="#map_marker")
+              span г.Уфа, ул. Свердлова, д.1

@@ -4,6 +4,12 @@
       "Frontend": [
         "HTML5",
         "CSS3",
+        "Responsive",
+        "HTML5",
+        "CSS3",
+        "Responsive",
+        "HTML5",
+        "CSS3",
         "Responsive"
       ]
     },
@@ -12,11 +18,25 @@
         "PHP",
         "mySQL",
         "Node.js",
+        "Express",
+        "PHP",
+        "mySQL",
+        "Node.js",
+        "Express",
+        "PHP",
+        "mySQL",
+        "Node.js",
         "Express"
       ]
     },
     {
       "WorkFlow": [
+        "Git",
+        "Gulp",
+        "Bower",
+        "Git",
+        "Gulp",
+        "Bower",
         "Git",
         "Gulp",
         "Bower"

@@ -4,10 +4,12 @@ doctype html
 html(lang="ru-RU")
 	include ../common/head.pug
 body
-	<!-- / ========= header ========= \ -->
-	include  ../common/header.pug
-	<!-- / ========= content ========= \ -->
-	block content
-	<!-- / ========= footer ========= \ -->
-	include ../common/svg.pug
-	include ../common/footer.pug
+	.main-layout
+		<!-- / ========= header ========= \ -->
+		include  ../common/header.pug
+		<!-- / ========= content ========= \ -->
+		block content
+		<!-- / ========= footer ========= \ -->
+		include ../common/footer.pug
+		<!-- / ========= svg ========= \ -->
+		include ../common/svg.pug

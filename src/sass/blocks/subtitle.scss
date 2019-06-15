@@ -1,9 +1,9 @@
-.subtitle {
+ .subtitle {
   position: relative;
   display: inline-block;
   margin: 0;
   padding-left: 42px;
-  padding-right: 42px;
+  padding-right: 42px; 
   @include bernier();
   font-size: 21px;
   line-height: 28px;
@@ -25,6 +25,11 @@
 
   &:before {
     left: 0px;
+  }
+
+  @include tablet {
+    font-size: 30px;
+    line-height: 36px;
   }
 
   @include desktop {

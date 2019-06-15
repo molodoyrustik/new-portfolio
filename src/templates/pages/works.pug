@@ -4,21 +4,25 @@ block title
   title Works
 
 block header
-  a(href="#").down-arrow
-    img(src="images/icons/arrow_down.svg", alt="").down-arrow__icon
-  .hero__title
-    img(src="images/icons/portfolio_header.svg", alt="").section-title
-    .user.hero__user-block
-      .user__photo
+  a(href="#").down-arrow.hero__down-arrow
+    svg.icon.hero__arrow-icon(width="25.18" height="16.164")
+      use(xlink:href="#arrow-down")
+  .hero__block
+    svg.icon.hero__portfolio-bg(width="1175.495" height="313.961")
+      use(xlink:href="#portfolio-header")
+    .user.hero__user
+      .user__photo.hero__photo
         .user__photo-avatar
+          picture
             img(src="/images/content/avatar.jpg" srcset='/images/content/avatar@2x.jpg 2x', alt="").user__photo-img
-      .user__name Руслан Багаутдинов
-      .user__description Личный сайт веб разработчика
+      .user__name.hero__user-name Руслан Багаутдинов
+      .user__description.hero__user-desc Личный сайт веб разработчика
   .hero__triangle-wrap
-    svg.triangle.triangle--fill-white(viewbox='0 0 1000 100', preserveaspectratio='none')
-          polygon(points='0,0 0,100 1000,100')
-    svg.triangle.triangle--fill-beige(viewbox='0 0 1000 100', preserveaspectratio='none')
-          polygon(points='0,100 1000,100 1000,0')
+    .triangle
+      svg.triangle__element.triangle__element--left.triangle__element--fill-works(viewbox='0 0 1000 100', preserveaspectratio='none')
+        polygon(points='0,0 0,100 1000,100')
+      svg.triangle__element.triangle__element--right.triangle__element--fill-works(viewbox='0 0 1000 100', preserveaspectratio='none')
+        polygon(points='0,100 1000,100 1000,0')
 
 block content
   section.section.works
@@ -27,19 +31,51 @@ block content
     .slider
       .slider__display
         .slider__window
-          img(src='./images/works/1.png').slider__img
+          img(src='./images/works/3.png').slider__img
       
       .slider__desk
         .slider__desk-wrapper
-          .title.slider__desk-title Сайт школы онлайн образования
+          .subtitle.slider__desk-title Сайт школы онлайн образования
           .slider__desk-technologies HTML, CSS, JAVASCRIPT
-          .slider__show-btn Посмотреть сайт
+          a(href="#").slider__button Посмотреть сайт
       
 
       .slider__controls
-        a.slider__controls-item.slider__controls-item_prev(href='#')
+        a.slider__controls-item.slider__controls-item--prev(href='#')
           img(src='images/works/4.png', class='slider__controls-img' alt='')
-        a.slider__controls-item.slider__controls-item_next(href='#')
+        a.slider__controls-item.slider__controls-item--next(href='#')
           img(src='images/works/2.png', class='slider__controls-img' alt='')
-      
+  
+  section.reviews.clearfix
+    +title('Что обо мне говорят', 'about-header.png', 'reviews__title')
+    .reviews__wrapper
+      ul.reviews__list
+        li.reviews__item
+          .reviews__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem corrupti asperiores repellat, quos fuga praesentium veniam, natus quisquam facere nihil fugit saepe blanditiis voluptas, amet repudiandae aliquam magnam animi earum.
+          .reviews__user-block
+            .reviews__photo
+              img(src="", alt="").reviews__img
+            .reviews__user-data 
+              .reviews__name Ковальчук Дмитрий
+              .reviews__position основатель Loftschool
+        li.reviews__item
+          .reviews__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem corrupti asperiores repellat, quos fuga praesentium veniam, natus quisquam facere nihil fugit saepe blanditiis voluptas, amet repudiandae aliquam magnam animi earum.
+          .reviews__user-block
+            .reviews__photo
+              img(src="", alt="").reviews__img
+            .reviews__user-data
+              .reviews__name Ковальчук Дмитрий
+              .reviews__position основатель Loftschool
+      .reviews__feedback
+        .feedback
+          .feedback__title
+          form.feedback__form
+            input.feedback__input(type="text")
+            input.feedback__input(type="text")
+            input.feedback__input(type="text")
+          .feedback__buttons
+            button.feedback__button Отправить
+            button.feedback__button Очистить
+
+
      

@@ -8,7 +8,7 @@
   font-size: 35px;
   line-height: 42px;
   @include bernier();
-  color: $main-font-color;
+  color: #373e42;
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@
     width: 22px;
     height: 5px;
     @include centered('y');
-    background: rgba($main-font-color, .2);
+    background: rgba(#373e42, .2);
   }
 
   &:after {
@@ -28,5 +28,39 @@
 
   &:before {
     left: 5px;
+  }
+
+  @include tablet {
+    padding-top: 18px;
+    padding-right: 52px;
+    padding-bottom: 18px;
+    padding-left: 52px;
+    font-size: 49px;
+    line-height: 52px;
+
+    &:after {
+      right: 6px;
+    }
+
+    &:before {
+      left: 5px;
+    }
+  }
+
+  @include desktop {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-size: 63px;
+    line-height: 46px;
+    
+    &:after {
+      right: 40px;
+    }
+
+    &:before {
+      left: 40px;
+    }
   }
 }

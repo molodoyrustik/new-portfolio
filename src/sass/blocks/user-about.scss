@@ -3,18 +3,33 @@
 }
 
 .user-about__photo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 320px;
+  margin: 0 auto;
   margin-bottom: 27px;
+
+  @include tablet {
+    max-width: 472px;
+    margin-bottom: 47px;
+  }
+
+  @include desktop {
+    max-width: 450px;
+    margin-bottom: 37px;
+  }
 }
 
 .user-about__img {
-  max-width: 320px;
+  max-width: 100%;
 }
 
 .user-about__title {
   margin-bottom: 10px;
+  @include tablet {
+    margin-bottom: 13px;
+  }
+  @include desktop {
+    margin-bottom: 33px;
+  }
 }
 
 .user-about__text {
@@ -31,5 +46,15 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  @include tablet {
+    width: 472px;
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    width: 450px;
+    padding: 0;
   }
 }
