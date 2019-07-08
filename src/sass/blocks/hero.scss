@@ -3,12 +3,17 @@
   width: 100%;
   min-height: 568px;
   height: 100vh;
+  background-image: url('/images/bg/welcome-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   @include tablet {
     min-height: 505px;
   }
 
   @include desktop {
+    background-image: none;
     min-height: 600px;
   }
 }
@@ -35,6 +40,7 @@
     padding-right: 30px;
     padding-left: 30px;
   }
+  z-index: 17;
 }
 
 .hero__socials {
@@ -51,8 +57,12 @@
 }
 
 .hero__bg {
-  min-height: 568px;
+  position: absolute;
+	top: 0;
+	left: 0;
+  right: 0;
   height: 100vh;
+  
   background-image: url('/images/bg/portfolio.jpg');
   background-repeat: no-repeat;
   background-size: cover;

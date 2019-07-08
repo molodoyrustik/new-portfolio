@@ -25,18 +25,14 @@ $.gulp.task('build', $.gulp.series(
     'sass-prod',
     'css.foundation',
     'pug.prod',
-    'js.foundation',
-    'js-prod',
+    'browserify',
     'imagemin',
-    // 'copy.image',
+    'copy.image',
     'webp',
     'fonts'
   ),
 ));
 
-$.gulp.task('img', $.gulp.series(
-  'imagemin'
-));
 
 $.gulp.task('default', $.gulp.series(
   'clean',
@@ -45,8 +41,7 @@ $.gulp.task('default', $.gulp.series(
     'sass',
     'css.foundation',
     'pug',
-    'js.foundation',
-    'js.process',
+    'browserify.dev',
     'copy.image',
     // 'webp',
     'fonts'

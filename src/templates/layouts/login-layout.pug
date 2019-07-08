@@ -6,6 +6,9 @@ html(lang="ru-RU").html-welcome
 body
 	block content
 
+	<!-- / ========= preloader ========= \ -->
+	include ../common/preloader.pug
+	<!-- / ========= svg ========= \ -->
 	include ../common/svg.pug
-	script(src='./js/foundation.js' defer)
+
 	script(src='./js/main.js' defer)

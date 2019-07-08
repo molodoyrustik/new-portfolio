@@ -1,16 +1,41 @@
-const authButton = document.querySelector('#auth-button');
-if (authButton) {
-  authButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    const flipCardInner = document.querySelector('.flip-card__inner');
-    authButton.classList.add('hide');
-    flipCardInner.classList.add('flip-card__inner--active');
-  
-    const goToMainButton = document.querySelector('#go-to-main');
-    goToMainButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      authButton.classList.remove('hide');
-      flipCardInner.classList.remove('flip-card__inner--active');
-    })
-  })
-}
+const $ = require('jquery');
+
+const preloader = require('./modules/preloader');
+const blur = require('./modules/blur');
+const auth = require('./modules/auth');
+const mainMenu = require('./modules/mainMenu');
+const mouseParallax = require('./modules/mouseParallax');
+const scrollParallax = require('./modules/scrollParallax');
+const sidebar = require('./modules/sidebar');
+const slider = require('./modules/slider');
+
+preloader();
+auth();
+blur();
+mainMenu();
+mouseParallax();
+scrollParallax();
+sidebar();
+
+var Controls = require('./modules/controls');
+var Display = require('./modules/display');
+var Description = require('./modules/description');
+var App = require('./modules/app');
+
+const controls = new Controls({
+  element: $('.slider__controls')
+})
+
+const display = new Display({
+  element: $('.slider__display')
+})
+
+const description = new Description({
+  element: $('.slider__desk')
+})
+
+const app = new App({
+  controls,
+  description,
+  display
+});

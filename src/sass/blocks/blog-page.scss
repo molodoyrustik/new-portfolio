@@ -1,0 +1,16 @@
+.blog-page {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 300px;
+  background-color: #ffffff;
+
+  @include tablet {
+    padding-top: 50px;
+  }
+
+  @include desktop {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+  }
+}

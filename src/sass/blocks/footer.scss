@@ -3,7 +3,7 @@
   bottom: 0;
   width: 100%;
   background: rgba(#373e42, 0.85);
-  z-index: 100;
+  z-index: 14;
 }
 
 .footer__wrapper {
@@ -49,6 +49,7 @@
   }
 
   @include desktop {
+    width: 50%;
     margin-bottom: 0;
   }
 
@@ -59,7 +60,9 @@
 
 
 .footer__right {
-
+  @include desktop {
+    width: 50%;
+  }
 }
 
 .footer__socials {
@@ -107,6 +110,10 @@
   @include roboto(light);
   color: rgba(#ffffff, 0.5);
   text-align: center;
+
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .footer__right-text {
@@ -117,4 +124,8 @@
   @include roboto(light);
   color: rgba(#ffffff, 0.5);
   text-align: center;
+
+  @include desktop {
+    text-align: right;
+  }
 }

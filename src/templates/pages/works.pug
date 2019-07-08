@@ -31,51 +31,89 @@ block content
     .slider
       .slider__display
         .slider__window
-          img(src='./images/works/3.png').slider__img
+          ul.slider__list
+            li.slider__display-inner
+              img(src='./images/works/1.png').slider__img
+            li.slider__display-inner
+              img(src='./images/works/2.png').slider__img
+            li.slider__display-inner.active
+              img(src='./images/works/3.png').slider__img
+            li.slider__display-inner
+              img(src='./images/works/4.png').slider__img
       
       .slider__desk
         .slider__desk-wrapper
-          .subtitle.slider__desk-title Сайт школы онлайн образования
-          .slider__desk-technologies HTML, CSS, JAVASCRIPT
+          .subtitle.slider__desk-title Первый проект
+          .slider__desk-technologies JavaScript, Jquery, HTML, CSS
+          a(href="#").slider__button Посмотреть сайт
+        .slider__desk-wrapper
+          .subtitle.slider__desk-title Второй проект
+          .slider__desk-technologies JavaScript, Jquery, HTML, CSS
+          a(href="#").slider__button Посмотреть сайт
+        .slider__desk-wrapper.active
+          .subtitle.slider__desk-title Третий проект
+          .slider__desk-technologies JavaScript, Jquery, HTML, CSS
+          a(href="#").slider__button Посмотреть сайт
+        .slider__desk-wrapper
+          .subtitle.slider__desk-title Четвертый проект
+          .slider__desk-technologies JavaScript, Jquery, HTML, CSS
           a(href="#").slider__button Посмотреть сайт
       
 
       .slider__controls
         a.slider__controls-item.slider__controls-item--prev(href='#')
-          img(src='images/works/4.png', class='slider__controls-img' alt='')
+          ul.slider__controls-list
+            li.slider__controls-photo
+              img(src='images/works/1.png').slider__controls-img
+            li.slider__controls-photo.active
+              img(src='images/works/2.png').slider__controls-img
+            li.slider__controls-photo
+              img(src='images/works/3.png').slider__controls-img
+            li.slider__controls-photo
+              img(src='images/works/4.png').slider__controls-img 
         a.slider__controls-item.slider__controls-item--next(href='#')
-          img(src='images/works/2.png', class='slider__controls-img' alt='')
+          ul.slider__controls-list
+            li.slider__controls-photo
+              img(src='images/works/1.png').slider__controls-img
+            li.slider__controls-photo
+              img(src='images/works/2.png').slider__controls-img
+            li.slider__controls-photo
+              img(src='images/works/3.png').slider__controls-img
+            li.slider__controls-photo.active
+              img(src='images/works/4.png').slider__controls-img
   
   section.reviews.clearfix
     +title('Что обо мне говорят', 'about-header.png', 'reviews__title')
     .reviews__wrapper
       ul.reviews__list
         li.reviews__item
-          .reviews__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem corrupti asperiores repellat, quos fuga praesentium veniam, natus quisquam facere nihil fugit saepe blanditiis voluptas, amet repudiandae aliquam magnam animi earum.
+          .reviews__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
           .reviews__user-block
             .reviews__photo
-              img(src="", alt="").reviews__img
+              img(src="/images/content/reviews/1.jpg", alt="").reviews__img
             .reviews__user-data 
               .reviews__name Ковальчук Дмитрий
               .reviews__position основатель Loftschool
         li.reviews__item
-          .reviews__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem corrupti asperiores repellat, quos fuga praesentium veniam, natus quisquam facere nihil fugit saepe blanditiis voluptas, amet repudiandae aliquam magnam animi earum.
+          .reviews__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
           .reviews__user-block
             .reviews__photo
-              img(src="", alt="").reviews__img
+              img(src="/images/content/reviews/2.jpg", alt="").reviews__img
             .reviews__user-data
-              .reviews__name Ковальчук Дмитрий
-              .reviews__position основатель Loftschool
+              .reviews__name Зар Захаров
+              .reviews__position преподователь
       .reviews__feedback
         .feedback
-          .feedback__title
-          form.feedback__form
-            input.feedback__input(type="text")
-            input.feedback__input(type="text")
-            input.feedback__input(type="text")
+          .feedback__bg
+          .feedback__wrapper
+            .subtitle.feedback__title Связаться со мной
+            form.feedback__form
+              input.feedback__input(type="text" placeholder='Имя')
+              input.feedback__input(type="text" placeholder='Email')
+              textarea.feedback__input.feedback__textarea(type="textarea" placeholder='Ваше сообщение')
           .feedback__buttons
-            button.feedback__button Отправить
-            button.feedback__button Очистить
+            button.feedback__button.feedback__button--left Отправить
+            button.feedback__button.feedback__button--right Очистить
 
 
      
