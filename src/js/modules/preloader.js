@@ -28,7 +28,11 @@ var preloader = (function() {
     $('.preloader__percents').text(persents + '%');
 
     if (persents >= 100) {
-      preloader.fadeOut();
+      preloader.delay(700).fadeOut(700, (e) => {
+        if($('.flip-card').length) {
+          $('.flip-card').addClass('loaded');
+        }
+      })
     }
   }
 

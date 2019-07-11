@@ -1,7 +1,6 @@
 .scroll-parallax {
-  display: block;
-  height: 100%;
   display: none;
+  height: 100%;
 
   @include desktop {
     display: block;

@@ -223,7 +223,6 @@
     background-position: center;
     background-repeat: no-repeat;
     z-index: 100;
-    background-image: url('/images/icons/portf_arrow_down.svg');
   }
 }
 
@@ -232,7 +231,7 @@
     background-color: rgba(#b6b4ae, 0.7);
   }
   &:before {
-    background-image: url('/images/icons/portf_arrow_down.svg');
+    background-image: url('/images/icons/arrow-down.svg');
   }
 }
 
@@ -241,7 +240,7 @@
     background-color: rgba(#888372, 0.5);
   }
   &:before {
-    background-image: url('/images/icons/portf_arrow_up.svg');
+    background-image: url('/images/icons/arrow-up.svg');
   }
 }
 

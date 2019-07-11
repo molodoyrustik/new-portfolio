@@ -4,11 +4,10 @@ doctype html
 html(lang="ru-RU").html-welcome
 	include ../common/head.pug
 body
-	block content
-
 	<!-- / ========= preloader ========= \ -->
 	include ../common/preloader.pug
+	block content
 	<!-- / ========= svg ========= \ -->
 	include ../common/svg.pug
 
-	script(src='./js/main.js' defer)
+	script(src='/js/main.min.js' defer)

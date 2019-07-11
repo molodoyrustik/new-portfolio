@@ -1,12 +1,26 @@
 .flip-card {
   width: 300px;
-  perspective: 1200;
+  // perspective: 1200;
   transform-style: preserve-3d;
+
+  position: relative;
+  text-align: center;
+  opacity: 0;
+  perspective: 1200;
+  transform-origin: top center;
+  transform: perspective(600) rotateX(-40deg) translateY(-20px);
+  transition: transform .7s,opacity .7s;
+
   @include tablet {
     width: 348px;
   }
   @include desktop {
     width: 380px;
+  }
+
+  &.loaded {
+    opacity: 1;
+    transform: perspective(1200) rotateX(0) translateY(0);
   }
 }
 .flip-card__inner {

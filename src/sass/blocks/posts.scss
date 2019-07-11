@@ -13,18 +13,13 @@
   }
 
   @include desktop {
-    width: 680px;
-    margin: 0;
-    margin-left: 110px;
-  }
-
-  @include desktopFull {
-    width: 980px;
-    margin-left: 120px;
+    width: auto;
+    padding: 0;
   }
 }
 
 .posts__list {
+  
 }
 
 .posts__item {

@@ -17,6 +17,7 @@ $green: #009688;
 
 // blocks
 @import "blocks/letter-span";
+@import "blocks/go";
 @import "blocks/socials";
 @import "blocks/menu";
 @import "blocks/user";
@@ -36,6 +37,7 @@ $green: #009688;
 @import "blocks/user-about";
 @import "blocks/about-data";
 @import "blocks/skills";
+@import "blocks/map";
 @import "blocks/contacts";
 @import "blocks/footer";
 @import "blocks/footer-menu";
@@ -54,3 +56,4 @@ $green: #009688;
 @import "blocks/mouse-parallax";
 @import "blocks/scroll-parallax";
 @import "blocks/preloader";
+@import "blocks/wow";

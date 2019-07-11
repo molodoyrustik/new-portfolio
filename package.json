@@ -43,6 +43,9 @@
     "watchify": "^3.11.1"
   },
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/preset-stage-2": "^7.0.0",
+    "animate.css": "^3.7.2",
     "browserify": "^16.2.3",
     "gulp-purge-sourcemaps": "^1.0.0",
     "gulp-remove-sourcemaps": "^1.0.0",

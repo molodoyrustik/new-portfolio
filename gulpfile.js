@@ -27,7 +27,7 @@ $.gulp.task('build', $.gulp.series(
     'pug.prod',
     'browserify',
     'imagemin',
-    'copy.image',
+    // 'copy.image',
     'webp',
     'fonts'
   ),

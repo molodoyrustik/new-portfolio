@@ -15,14 +15,16 @@ module.exports = function() {
       .pipe(sourceStream('main.js'))
       .pipe(buffer())
       .pipe(removeSourcemaps())
+      .pipe($.gp.babel({
+        presets: ['@babel/env'],
+        plugins: ['@babel/plugin-proposal-class-properties']
+      }))
       .pipe($.gulp.dest($.config.root + '/js/'))
       .pipe($.gp.rename('main.min.js'))
-      .pipe($.gp.babel({
-        presets: ['@babel/env']
-      }))
       .pipe($.gp.uglify())
       .pipe($.gulp.dest($.config.root + '/js'))
   })
 };
+
 
 // gulp.watch($.path.app, $.gulp.series('browserify'));

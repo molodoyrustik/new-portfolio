@@ -6,6 +6,20 @@
   z-index: 14;
 }
 
+.footer__up-arrow {
+  position: absolute;
+  @include centered('x');
+  top: -60px;
+
+  @include tablet {
+    top: -76px;
+  }
+
+  @include desktop {
+    top: -86px;
+  }
+}
+
 .footer__wrapper {
 
 }
@@ -66,7 +80,9 @@
 }
 
 .footer__socials {
-  
+   @include desktop  {
+    justify-content: flex-end;
+  }
 }
 
 .footer__socials-item {

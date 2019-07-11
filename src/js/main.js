@@ -8,6 +8,12 @@ const mouseParallax = require('./modules/mouseParallax');
 const scrollParallax = require('./modules/scrollParallax');
 const sidebar = require('./modules/sidebar');
 const slider = require('./modules/slider');
+const goButton = require('./modules/goButtons');
+const gmap = require('./modules/gmap');
+const wow = require('./modules/wow');
+const blog = require('./modules/blog');
+const sidebarActiveClass = require('./modules/sidebarActiveClass');
+const sidebarTransition = require('./modules/sidebarTransition');
 
 preloader();
 auth();
@@ -16,26 +22,10 @@ mainMenu();
 mouseParallax();
 scrollParallax();
 sidebar();
-
-var Controls = require('./modules/controls');
-var Display = require('./modules/display');
-var Description = require('./modules/description');
-var App = require('./modules/app');
-
-const controls = new Controls({
-  element: $('.slider__controls')
-})
-
-const display = new Display({
-  element: $('.slider__display')
-})
-
-const description = new Description({
-  element: $('.slider__desk')
-})
-
-const app = new App({
-  controls,
-  description,
-  display
-});
+slider();
+goButton();
+gmap();
+wow();
+blog();
+sidebarActiveClass();
+sidebarTransition();

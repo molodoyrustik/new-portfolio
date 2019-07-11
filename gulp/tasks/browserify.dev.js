@@ -12,6 +12,11 @@ module.exports = function() {
     return bundler
       .bundle()
       .pipe(sourceStream('main.js'))
+      .pipe(buffer())
+      .pipe($.gp.babel({
+        presets: ['@babel/env'],
+        plugins: ['@babel/plugin-proposal-class-properties']
+      }))
       .pipe($.gulp.dest($.config.root + '/js/'))
   })
 };

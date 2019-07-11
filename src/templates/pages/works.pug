@@ -4,9 +4,7 @@ block title
   title Works
 
 block header
-  a(href="#").down-arrow.hero__down-arrow
-    svg.icon.hero__arrow-icon(width="25.18" height="16.164")
-      use(xlink:href="#arrow-down")
+  button(href="#" data-link='.slider').go.go__down.fa.fa-chevron-down.hero__down-arrow
   .hero__block
     svg.icon.hero__portfolio-bg(width="1175.495" height="313.961")
       use(xlink:href="#portfolio-header")
@@ -30,7 +28,7 @@ block content
       +title('Мои работы', 'works-header.png', 'works__title')
     .slider
       .slider__display
-        .slider__window
+        .slider__window.wow(data-animate='toFadeIn')
           ul.slider__list
             li.slider__display-inner
               img(src='./images/works/1.png').slider__img
@@ -61,7 +59,7 @@ block content
       
 
       .slider__controls
-        a.slider__controls-item.slider__controls-item--prev(href='#')
+        a.slider__controls-item.slider__controls-item--prev(href='#' data-animate='toFadeIn').wow
           ul.slider__controls-list
             li.slider__controls-photo
               img(src='images/works/1.png').slider__controls-img
@@ -71,7 +69,7 @@ block content
               img(src='images/works/3.png').slider__controls-img
             li.slider__controls-photo
               img(src='images/works/4.png').slider__controls-img 
-        a.slider__controls-item.slider__controls-item--next(href='#')
+        a.slider__controls-item.slider__controls-item--next(href='#' data-animate='toFadeIn').wow
           ul.slider__controls-list
             li.slider__controls-photo
               img(src='images/works/1.png').slider__controls-img
@@ -83,9 +81,9 @@ block content
               img(src='images/works/4.png').slider__controls-img
   
   section.reviews.clearfix
-    +title('Что обо мне говорят', 'about-header.png', 'reviews__title')
+    +title('Что обо мне говорят', 'about-header.png', 'reviews__title wow', 'toBounceInUp')
     .reviews__wrapper
-      ul.reviews__list
+      ul.reviews__list.wow(data-animate='toFadeInUp')
         li.reviews__item
           .reviews__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
           .reviews__user-block
@@ -114,6 +112,5 @@ block content
           .feedback__buttons
             button.feedback__button.feedback__button--left Отправить
             button.feedback__button.feedback__button--right Очистить
-
 
      

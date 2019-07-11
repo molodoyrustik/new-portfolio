@@ -195,6 +195,12 @@
 }
 
 .reviews__feedback {
+  position: relative;
   display: flex;
   justify-content: center;
+}
+
+.reviews__up-arrow {
+  position: absolute;
+  bottom: -77px;
 }

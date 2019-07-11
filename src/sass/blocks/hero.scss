@@ -62,7 +62,6 @@
 	left: 0;
   right: 0;
   height: 100vh;
-  
   background-image: url('/images/bg/portfolio.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -71,6 +70,7 @@
 
 .hero__down-arrow {
   display: block;
+  z-index: 100;
   @include centered('x');
   bottom: 50px;
 
@@ -86,11 +86,6 @@
   @include tablet {
     width: 370px;
   }
-}
-
-.hero__arrow-icon {
-  display: block;
-  fill: rgba(#ffffff, 0.7);
 }
 
 .hero__portfolio-bg {

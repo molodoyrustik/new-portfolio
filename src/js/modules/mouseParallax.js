@@ -2,11 +2,10 @@ module.exports = () => {
   if(document.querySelector('.mouse-parallax')) {
     var parallaxContainer = document.querySelector('.mouse-parallax'),
     layers = parallaxContainer.children;
-
     var moveLayers = function (e) {
       var initialX = (window.innerWidth / 2) - e.pageX
-        initialY = (window.innerHeight / 2) - e.pageY;
-
+      var initialY = (window.innerHeight / 2) - e.pageY;
+      
       [].slice.call(layers).forEach(function (layer, i) {
         var
           divider = i / 100, 

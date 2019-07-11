@@ -1,7 +1,7 @@
 .blog-page {
   position: relative;
   padding-top: 32px;
-  padding-bottom: 300px;
+  padding-bottom: 350px;
   background-color: #ffffff;
 
   @include tablet {
@@ -9,8 +9,52 @@
   }
 
   @include desktop {
-    display: flex;
-    justify-content: center;
     padding-top: 70px;
   }
 }
+
+.blog-page__fixed {
+  display: none;
+
+  @include desktop {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.blog-page__container {
+  @extend .clearfix;
+  @include desktop {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.blog-page__static {
+  @include desktop {}
+}
+
+.blog-page__left {
+  @include desktop {
+    width: 270px;
+    float: left;
+    height: 1px;
+  }
+}
+
+.blog-page__right {
+	@include desktop {
+    width: 680px;
+    margin: 0;
+    margin-left: 110px;
+	  float: left;
+  }
+  @include desktopFull {
+    width: 980px;
+    margin-left: 120px;
+  }
+}
+
