@@ -1,3 +1,5 @@
+var $ = require('jquery');
+
 module.exports = () => {
   if(document.querySelector('.scroll-parallax')) {
     var parallax = (function () {

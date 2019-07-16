@@ -46,7 +46,7 @@ block content
                     a(href="blog.html").menu__link Блог
 
           .flip-card__back      
-            .login
+            form.login#form
               .login__form
                 .subtitle.login__title Авторизуйтесь
                 .login__elements
@@ -54,14 +54,14 @@ block content
                     span.login__icon-wrap
                       svg.icon(width='14.137px' height='15.422px').login__icon
                         use(xlink:href=`#login`)
-                    input(placeholder='Логин').login__input
+                    input(placeholder='Логин' data-validation='mail' data-id='0').login__input
                   label.login__label
                     span.login__icon-wrap
                       svg.icon(width='16.897px' height='15.984px').login__icon
                         use(xlink:href=`#password`)
-                    input(placeholder='Пароль').login__input
+                    input(placeholder='Пароль' data-validation='password' data-id='1').login__input
                   label.checkbox-group.login__checkbox-label
-                    input.checkbox-group__input(type='checkbox', name='')
+                    input.checkbox-group__input(type='checkbox', name='' data-validation='human')
                     span.checkbox-group__indicator
                       svg.icon(width='11' height='9').checkbox-group__icon
                         use(xlink:href=`#check`)
@@ -70,11 +70,11 @@ block content
                     .login__robot-text Вы точно не робот?
                     .login__radio-wrap
                       label.radio-group.login__radio-label
-                        input(type='radio' name='radio').radio-group__input
+                        input(type='radio' name='radio' data-validation='robot' value='1').radio-group__input
                         span.radio-group__indicator
                         span.radio-group__text  Да
                       label.radio-group.login__radio-label
-                        input(type='radio' name='radio').radio-group__input
+                        input(type='radio' name='radio' data-validation='robot' value='0').radio-group__input
                         span.radio-group__indicator
                         span.radio-group__text  Не уверен
               nav.menu
@@ -82,6 +82,6 @@ block content
                   li.menu__item
                     a(href="#" id='go-to-main').menu__link На главную
                   li.menu__item
-                    a(href="#").menu__link Войти
+                    button(type='submit').menu__link Войти
         
       p.welcome__footer-text © Руслан Багаутдинов | I boldly go where my dream is | 2016

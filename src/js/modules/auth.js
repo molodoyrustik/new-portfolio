@@ -15,11 +15,11 @@ module.exports = () => {
         flipCardInner.classList.remove('flip-card__inner--active');
       })
     })
-    window.addEventListener('click', (e) => {
-      if (!e.target.closest('.flip-card') && !e.target.closest('.welcome__auth-btn')) {
-        authButton.classList.remove('hide');
-        flipCardInner.classList.remove('flip-card__inner--active');
-      }
-    })  
+    // window.addEventListener('click', (e) => {
+    //   if (!e.target.closest('.flip-card') && !e.target.closest('.welcome__auth-btn')) {
+    //     authButton.classList.remove('hide');
+    //     flipCardInner.classList.remove('flip-card__inner--active');
+    //   }
+    // })  
   }
 };

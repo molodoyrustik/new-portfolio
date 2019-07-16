@@ -39,23 +39,40 @@
   &:last-child {
     margin-bottom: 24px;
   }
+
+  &.focus {
+    .login__input {
+      border: 1px solid #00bfa5
+    }
+    .login__icon {
+      fill: #00bfa5;
+    }
+  }
+  &.error {
+    .login__input {
+      border: 1px solid #e44845
+    }
+    .login__icon {
+      fill: #e44845;
+    }
+  }
 }
 
 .login__icon-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 45px;
-  height: 45px;
+  min-width: 45px;
   background-color: #f0efe9;
 }
 
 .login__icon {
   fill: #c4cbcd;
+  transition: all .3s;
 }
 
 .login__input {
-  flex-grow: 1;
+  width: 90%;
   display: block;
   margin: 0;
   padding-top: 14px;
@@ -65,8 +82,11 @@
   font-size: 16px;
   @include roboto(regular);
   color: #373e42;
-  border: none;
+  border: 1px solid transparent;
   outline: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: all .3s;
 }
 
 .login__checkbox-label {

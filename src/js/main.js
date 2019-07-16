@@ -14,6 +14,7 @@ const wow = require('./modules/wow');
 const blog = require('./modules/blog');
 const sidebarActiveClass = require('./modules/sidebarActiveClass');
 const sidebarTransition = require('./modules/sidebarTransition');
+const validation = require('./modules/validation');
 
 preloader();
 auth();
@@ -29,3 +30,16 @@ wow();
 blog();
 sidebarActiveClass();
 sidebarTransition();
+validation(); 
+
+
+// var inputs = labels.find('.login__input');
+
+// inputs.focus(function(e) {
+//   $(this).addClass('login__input--focus');
+//   $(this).parent('.login__label').addClass('focus');
+// });
+
+// inputs.blur(function(e) {
+//   $(this).parent('.login__label').removeClass('focus');
+// });

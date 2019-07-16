@@ -17,5 +17,6 @@ module.exports = [
   './gulp/tasks/imagemin.js',
   './gulp/tasks/webp.js',
   './gulp/tasks/browserify.js',
-  './gulp/tasks/browserify.dev.js'
+  './gulp/tasks/browserify.dev.js',
+  './gulp/tasks/tinypng.js'
 ];

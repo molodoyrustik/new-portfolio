@@ -21,14 +21,15 @@ $.path.tasks.forEach(function(taskPath) {
 $.gulp.task('build', $.gulp.series(
   'clean',
   'sprite.svg',
+  'tinypng',
+  'webp',
   $.gulp.parallel(
     'sass-prod',
     'css.foundation',
     'pug.prod',
     'browserify',
-    'imagemin',
+    // 'imagemin',
     // 'copy.image',
-    'webp',
     'fonts'
   ),
 ));

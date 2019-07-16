@@ -9,6 +9,15 @@ var preloader = (function() {
     var img = $(element).is('img');
     var path = '';
 
+    if ($(window).height() <= 1200) {
+      if (element.closest('.scroll-parallax__layer')) {
+        return;
+      } else if(element.closest('.mouse-parallax__layer')) {
+        return;
+      }
+    }
+
+   
     if (background != 'none') {
       path = background.replace('url("', '').replace('")', '');
     }
@@ -56,7 +65,7 @@ var preloader = (function() {
   return {
     init: () => {
       var imgs = imgPath.toArray();
-
+      
       loadImages(imgs);
     }
   };

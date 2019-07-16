@@ -19,8 +19,22 @@
     padding-top: 20px;
     bottom: 30px;
   }
+  &:before {
+    display: block;
+    content: "\f078";
+    font-family: 'FontAwesome';
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .go__up {
+  &:before {
+    display: block;
+    content: "\f077";
+    font-family: 'FontAwesome';
+    font-size: 36px;
+    line-height: 36px;
+  }
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }

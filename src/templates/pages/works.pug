@@ -101,16 +101,16 @@ block content
               .reviews__name Зар Захаров
               .reviews__position преподователь
       .reviews__feedback
-        .feedback
+        form.feedback#feedback-form
           .feedback__bg
           .feedback__wrapper
             .subtitle.feedback__title Связаться со мной
-            form.feedback__form
-              input.feedback__input(type="text" placeholder='Имя')
-              input.feedback__input(type="text" placeholder='Email')
-              textarea.feedback__input.feedback__textarea(type="textarea" placeholder='Ваше сообщение')
+            .feedback__form
+              input.feedback__input(type="text" placeholder='Имя' data-validation='text' data-id='0')
+              input.feedback__input(type="text" placeholder='Email' data-validation='text' data-id='1')
+              textarea.feedback__input.feedback__textarea(type="textarea" placeholder='Ваше сообщение' data-validation='text' data-id='2')
           .feedback__buttons
-            button.feedback__button.feedback__button--left Отправить
-            button.feedback__button.feedback__button--right Очистить
+            button(type='submit' id='feedback-submit').feedback__button.feedback__button--left Отправить
+            button(id='feedback-clean').feedback__button.feedback__button--right Очистить
 
      
