@@ -5,17 +5,17 @@ block title
 
 block content
     .welcome
-      .mouse-parallax
-        .mouse-parallax__layer
-        .mouse-parallax__layer
-        .mouse-parallax__layer
-        .mouse-parallax__layer
-        .mouse-parallax__layer
-        .mouse-parallax__layer
-        .mouse-parallax__layer
-        .mouse-parallax__layer
-        .mouse-parallax__layer
-        .mouse-parallax__layer
+      //- .mouse-parallax
+      //-   .mouse-parallax__layer
+      //-   .mouse-parallax__layer
+      //-   .mouse-parallax__layer
+      //-   .mouse-parallax__layer
+      //-   .mouse-parallax__layer
+      //-   .mouse-parallax__layer
+      //-   .mouse-parallax__layer
+      //-   .mouse-parallax__layer
+      //-   .mouse-parallax__layer
+      //-   .mouse-parallax__layer
         
       a(href="#" id='auth-button').button.welcome__auth-btn Авторизоваться
       .flip-card
@@ -54,14 +54,14 @@ block content
                     span.login__icon-wrap
                       svg.icon(width='14.137px' height='15.422px').login__icon
                         use(xlink:href=`#login`)
-                    input(placeholder='Логин' data-validation='mail' data-id='0').login__input
+                    input(placeholder='Логин' data-validation='mail' data-id='0' name='email').login__input
                   label.login__label
                     span.login__icon-wrap
                       svg.icon(width='16.897px' height='15.984px').login__icon
                         use(xlink:href=`#password`)
-                    input(placeholder='Пароль' data-validation='password' data-id='1').login__input
+                    input(placeholder='Пароль' data-validation='password' data-id='1' name='password').login__input
                   label.checkbox-group.login__checkbox-label
-                    input.checkbox-group__input(type='checkbox', name='' data-validation='human')
+                    input.checkbox-group__input(type='checkbox', name='human' data-validation='human')
                     span.checkbox-group__indicator
                       svg.icon(width='11' height='9').checkbox-group__icon
                         use(xlink:href=`#check`)

@@ -58,3 +58,17 @@ $green: #009688;
 @import "blocks/preloader";
 @import "blocks/wow";
 @import "blocks/popup";
+
+// admin
+@import "blocks/admin/admin-title";
+@import "blocks/admin/admin-button";
+@import "blocks/admin/admin-input";
+
+@import "blocks/admin/admin-page";
+@import "blocks/admin/header-admin";
+@import "blocks/admin/tabs";
+
+@import "blocks/admin/tabs-content";
+@import "blocks/admin/admin-about";
+@import "blocks/admin/admin-works";
+@import "blocks/admin/admin-blog";

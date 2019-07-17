@@ -1,5 +1,7 @@
 var $ = require('jquery');
+var axios = require('axios');
 
+const urlApi = 'http://localhost:3001/api/v1'
 module.exports = () => {
     $(document).ready(function () {
         if ($('.popup').length) {
@@ -15,14 +17,20 @@ module.exports = () => {
             var $this = $(this);
 
             if (validateThis($this, inputLabel)) {
-                postFormData($this, function (data) {
-                    if (data.status == 5) {
+                postFormData($this, `${urlApi}/auth/signin`)
+                .then((response) => {
+                    if (response.status === 200) {
+                        console.log(response.data);
                         Popups.open('success', 'Успешно');
-                        // появление попапа success
-                    } else {
-                        Popups.open('error', 'Ошибка 404');
-                    }
-                });
+                        setTimeout(() => {
+                            Popups.close();
+                            // window.location.href = "admin.html"
+                        }, 1000)
+                    } 
+                })
+                .catch((err) => {
+                    Popups.open('error', 'Ошибка 404');
+                })
             }
 
             $(document).on('click', function (e) {
@@ -89,8 +97,7 @@ module.exports = () => {
         }
     })();
 
-    function postFormData(form, successCallback) {
-        var host = form.attr('action');
+    function postFormData(form, host, successCallback) {
         var reqFields = form.find('[name]');
         var dataObject = {};
 
@@ -102,7 +109,7 @@ module.exports = () => {
             dataObject[name] = value;
         });
 
-        $.post(host, dataObject, successCallback);
+        return axios.post(host, dataObject);
     }
 
     function addErrorClass(className) {

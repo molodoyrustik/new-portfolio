@@ -1,4 +1,5 @@
 const $ = require('jquery');
+const axios = require('axios');
 
 const preloader = require('./modules/preloader');
 const blur = require('./modules/blur');
@@ -15,6 +16,7 @@ const blog = require('./modules/blog');
 const sidebarActiveClass = require('./modules/sidebarActiveClass');
 const sidebarTransition = require('./modules/sidebarTransition');
 const validation = require('./modules/validation');
+const tabs = require('./modules/tabs');
 
 preloader();
 auth();
@@ -31,7 +33,7 @@ blog();
 sidebarActiveClass();
 sidebarTransition();
 validation(); 
-
+tabs();
 
 // var inputs = labels.find('.login__input');
 

@@ -4,7 +4,13 @@ module.exports = function() {
   $.gulp.task('serve', function() {
     $.browserSync.init({
       open: false,
-      server: $.config.root,
+      server: {
+        baseDir: $.config.root,
+        middleware: function (req, res, next) {
+          res.setHeader('Access-Control-Allow-Origin', '*');
+          next();
+        },
+      },
       notify: false,
       cors: true,
       ui: false
