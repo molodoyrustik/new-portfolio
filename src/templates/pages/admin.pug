@@ -21,12 +21,12 @@ block content
       main.admin-page__content
         .tabs-content
           ul.tabs-content__list
-            li.tabs-content__item(data-tab='about')
+            li.tabs-content__item.tabs-content__item--active(data-tab='about')
               .admin-about
                 .admin-title.admin-about__title Страница «Обо мне»
                 form.admin-about__form
                   ul.admin-about__list 
-                    each skill in skills
+                    each skill in content.skills
                       each skillsArray, skillName in skill
                         li.admin-about__group
                             h2.admin-about__group-title= skillName

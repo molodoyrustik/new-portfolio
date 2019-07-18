@@ -7,13 +7,13 @@
   display: none;
   z-index: 1000;
 
-  &.error .popup__content {
-    border: 2px solid #e44845;
-  }
+  // &.error .popup__content {
+  //   border: 2px solid #e44845;
+  // }
 
-  &.success .popup__content {
-    border: 2px solid #00bfa5;
-  }
+  // &.success .popup__content {
+  //   border: 2px solid #00bfa5;
+  // }
 }
 
 .popup__overlay {

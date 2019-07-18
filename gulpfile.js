@@ -29,7 +29,7 @@ $.gulp.task('build', $.gulp.series(
     'pug.prod',
     'browserify',
     // 'imagemin',
-    // 'copy.image',
+    'copy.icons',
     'fonts'
   ),
 ));
@@ -38,14 +38,14 @@ $.gulp.task('build', $.gulp.series(
 $.gulp.task('default', $.gulp.series(
   'clean',
   'sprite.svg',
+  // 'webp.dev',
   $.gulp.parallel(
     'sass',
     'css.foundation',
     'pug',
     'browserify.dev',
     'copy.image',
-    // 'webp',
-    'fonts'
+    'fonts',
   ),
   $.gulp.parallel(
     'watch',

@@ -12,4 +12,7 @@ body
 	<!-- / ========= svg ========= \ -->
 	include ../common/svg.pug
 
-	script(src='/js/main.js' defer)
+	if NODE_ENV === 'production'
+		script(src='/js/main.min.js' defer)
+	else 
+		script(src='/js/main.js' defer)

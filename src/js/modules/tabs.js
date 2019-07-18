@@ -5,7 +5,6 @@ module.exports = () => {
   var tabsItems = tabs.find('.tabs__item');
   var tabsButtons = tabs.find('.tabs__button');
   var tabsContent = $('.tabs-content')
-  window.$ = $;
 
   tabsButtons.on('click', (e) => {
     e.preventDefault();
@@ -17,14 +16,10 @@ module.exports = () => {
     var dataTab = parent.data('tab');
     var items = tabsContent.find('.tabs-content__item')
     var currentItem = items.find(`[data-tab='${dataTab}']`)
-    items.css({
-      display: 'none'
-    })
+    items.removeClass('tabs-content__item--active');
     items.each((index, elem) => {
       if ($(elem).data('tab') === dataTab) {
-        $(elem).css({
-          display: 'block'
-        })
+        $(elem).addClass('tabs-content__item--active');
       }
     })
   })

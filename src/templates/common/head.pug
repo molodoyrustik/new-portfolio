@@ -21,5 +21,9 @@ head
 	link(rel='preload', href='/fonts/Roboto-Regular.woff2', as='font', type='font/woff2' crossorigin='')
 	// styles
 	link(href='/css/foundation.css' rel="stylesheet" type="text/css")
-	link(href='/css/main.css' rel="stylesheet" type="text/css")
+	if NODE_ENV === 'production'
+		link(href='/css/main.min.css' rel="stylesheet" type="text/css")
+	else 
+		link(href='/css/main.css' rel="stylesheet" type="text/css")
+	
 

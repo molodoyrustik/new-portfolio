@@ -1,5 +1,4 @@
 const $ = require('jquery');
-
 var preloader = (function() {
   var percentsTotal = 0;
   var preloader = $('.preloader');

@@ -12,11 +12,13 @@ module.exports = [
   './gulp/tasks/js-prod.js',
   './gulp/tasks/js.lint.js',
   './gulp/tasks/copy.image.js',
+  './gulp/tasks/copy.icons.js',
   './gulp/tasks/sprite.svg.js',
   './gulp/tasks/fonts.js',
   './gulp/tasks/imagemin.js',
   './gulp/tasks/webp.js',
   './gulp/tasks/browserify.js',
   './gulp/tasks/browserify.dev.js',
-  './gulp/tasks/tinypng.js'
+  './gulp/tasks/tinypng.js',
+  './gulp/tasks/webp.dev.js'
 ];

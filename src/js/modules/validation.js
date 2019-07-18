@@ -1,43 +1,14 @@
 var $ = require('jquery');
 var axios = require('axios');
+const Popup = require('../utils/Popup');
 
 const urlApi = 'http://localhost:3001/api/v1'
+
 module.exports = () => {
     $(document).ready(function () {
         if ($('.popup').length) {
-            Popups.init();
+            Popup.init();
         }
-
-        const inputLabel = '.login__label';
-        const feedbackFormLabel = '.feedback__form'
-
-        $('#form').on('submit', function (e) {
-            e.preventDefault();
-
-            var $this = $(this);
-
-            if (validateThis($this, inputLabel)) {
-                postFormData($this, `${urlApi}/auth/signin`)
-                .then((response) => {
-                    if (response.status === 200) {
-                        console.log(response.data);
-                        Popups.open('success', 'Успешно');
-                        setTimeout(() => {
-                            Popups.close();
-                            // window.location.href = "admin.html"
-                        }, 1000)
-                    } 
-                })
-                .catch((err) => {
-                    Popups.open('error', 'Ошибка 404');
-                })
-            }
-
-            $(document).on('click', function (e) {
-                Popups.close();
-                removeErrorClasses(inputLabel);
-            });
-        });
 
         $('#feedback-submit').on('click', function (e) {
             e.preventDefault();
@@ -48,10 +19,10 @@ module.exports = () => {
             if (validateThis($this, feedbackFormLabel)) {
                 postFormData($this, function (data) {
                     if (data.status == 5) {
-                        Popups.open('success', 'Успешно');
+                        Popup.open('success', 'Успешно');
                         // появление попапа success
                     } else {
-                        Popups.open('error', 'Ошибка 404');
+                        Popup.open('error', 'Ошибка 404');
                     }
                 });
             }
@@ -65,7 +36,7 @@ module.exports = () => {
             })
 
             $(document).on('click', function (e) {
-                Popups.close();
+                Popup.close();
                 removeErrorClasses(feedbackFormLabel);
             });
         });
@@ -73,31 +44,7 @@ module.exports = () => {
         
     });
 
-    var Popups = (function () {
-        var popup = $('.popup');
-
-        return {
-            close: function () {
-                popup.hide();
-            },
-
-            init: function () {
-                $('.popup__close, .popup__overlay').on('click', (e) => {
-                    e.preventDefault();
-                    this.close();
-                })
-            },
-
-            open: function (className, text) {
-                this.close();
-                popup.addClass(className);
-                popup.find('.popup__content-inner').text(text);
-                popup.fadeIn(200);
-            }
-        }
-    })();
-
-    function postFormData(form, host, successCallback) {
+    function postFormData(form, host) {
         var reqFields = form.find('[name]');
         var dataObject = {};
 
@@ -112,16 +59,7 @@ module.exports = () => {
         return axios.post(host, dataObject);
     }
 
-    function addErrorClass(className) {
-        $(className).addClass('error');
-    }
-
-    function removeErrorClasses(className) {
-        $(className).removeClass('error');
-    }
-
     function validateThis(form, className) {
-        window.$ = $;
         var textType = form.find("[data-validation='text']");
         var mailType = form.find("[data-validation='mail']");
         var passwordType = form.find("[data-validation='password']");
@@ -143,7 +81,7 @@ module.exports = () => {
                 if (value) {
                     isValid = true;
                 } else {
-                    Popups.open('error', 'Подтвердите что вы не робот');
+                    Popup.open('error', 'Подтвердите что вы не робот');
                     isValid = false;
                 }
             }
@@ -158,7 +96,7 @@ module.exports = () => {
             if (notEmptyField) {
                 isValid = true;
             } else {
-                Popups.open('error', 'Подтвердите что вы человек');
+                Popup.open('error', 'Подтвердите что вы человек');
                 isValid = false;
             }
         });
@@ -170,8 +108,7 @@ module.exports = () => {
             if (notEmptyField) {
                 isValid = true;
             } else {
-                Popups.open('error', 'Вы не ввели пароль');
-                addErrorClass(className);
+                Popup.open('error', 'Вы не ввели пароль');
                 isValid = false;
             }
         });
@@ -183,8 +120,7 @@ module.exports = () => {
             if (notEmptyField) {
                 isValid = true;
             } else {
-                addErrorClass(className);
-                Popups.open('error', 'Введите данные');
+                Popup.open('error', 'Введите данные');
                 isValid = false;
             }
         });
@@ -199,13 +135,11 @@ module.exports = () => {
                 if (isMail) {
                     isValid = true;
                 } else {
-                    addErrorClass(className);
-                    Popups.open('error', 'Неверный email');
+                    Popup.open('error', 'Неверный email');
                     isValid = false;
                 }
             } else {
-                addErrorClass(className);
-                Popups.open('error', 'Вы не ввели логин');
+                Popup.open('error', 'Вы не ввели логин');
                 isValid = false;
             }
 

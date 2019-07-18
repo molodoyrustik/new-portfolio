@@ -5,17 +5,17 @@ block title
 
 block content
     .welcome
-      //- .mouse-parallax
-      //-   .mouse-parallax__layer
-      //-   .mouse-parallax__layer
-      //-   .mouse-parallax__layer
-      //-   .mouse-parallax__layer
-      //-   .mouse-parallax__layer
-      //-   .mouse-parallax__layer
-      //-   .mouse-parallax__layer
-      //-   .mouse-parallax__layer
-      //-   .mouse-parallax__layer
-      //-   .mouse-parallax__layer
+      .mouse-parallax
+        .mouse-parallax__layer
+        .mouse-parallax__layer
+        .mouse-parallax__layer
+        .mouse-parallax__layer
+        .mouse-parallax__layer
+        .mouse-parallax__layer
+        .mouse-parallax__layer
+        .mouse-parallax__layer
+        .mouse-parallax__layer
+        .mouse-parallax__layer
         
       a(href="#" id='auth-button').button.welcome__auth-btn Авторизоваться
       .flip-card
@@ -25,7 +25,9 @@ block content
               .welcome__info
                 .user
                   .user__photo
-                    img(src="images/content/avatar.jpg", alt="").user__photo-img
+                    picture
+                      //- source(type='image/webp', srcset='/images/content/avatar.webp 1x, /images/content/avatar@2x.webp 2x')
+                      img(src="/images/content/avatar.jpg" srcset='/images/content/avatar@2x.jpg 2x', alt="").user__photo-img
                   .user__name Руслан Багаутдинов
                   .user__description Личный сайт веб разработчика
                 .socials.welcome__socials
@@ -51,15 +53,15 @@ block content
                 .subtitle.login__title Авторизуйтесь
                 .login__elements
                   label.login__label
+                    input(type='text' placeholder='Логин' data-validation='mail' data-id='0' name='email').login__input
                     span.login__icon-wrap
                       svg.icon(width='14.137px' height='15.422px').login__icon
-                        use(xlink:href=`#login`)
-                    input(placeholder='Логин' data-validation='mail' data-id='0' name='email').login__input
+                        use(xlink:href=`#login`)  
                   label.login__label
+                    input(type='password' placeholder='Пароль' data-validation='text' data-id='1' name='password').login__input
                     span.login__icon-wrap
                       svg.icon(width='16.897px' height='15.984px').login__icon
                         use(xlink:href=`#password`)
-                    input(placeholder='Пароль' data-validation='password' data-id='1' name='password').login__input
                   label.checkbox-group.login__checkbox-label
                     input.checkbox-group__input(type='checkbox', name='human' data-validation='human')
                     span.checkbox-group__indicator

@@ -25,4 +25,8 @@ footer.footer
 				p.footer__right-text © Руслан Багаутдинов | I boldly go where my dream is | 2016
 				
 script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCSKzsuN9IOiywpVArtVVpAc8OsepITINk', async='', defer='')
-script(src='/js/main.js' defer)
+
+if NODE_ENV === 'production'
+	script(src='/js/main.min.js' defer)
+else 
+	script(src='/js/main.js' defer)

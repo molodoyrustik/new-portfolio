@@ -1,5 +1,4 @@
 const $ = require('jquery');
-const axios = require('axios');
 
 const preloader = require('./modules/preloader');
 const blur = require('./modules/blur');
@@ -15,8 +14,10 @@ const wow = require('./modules/wow');
 const blog = require('./modules/blog');
 const sidebarActiveClass = require('./modules/sidebarActiveClass');
 const sidebarTransition = require('./modules/sidebarTransition');
-const validation = require('./modules/validation');
 const tabs = require('./modules/tabs');
+
+// const authForm = require('./net/authForm');
+// const worksNet = require('./net/works');
 
 preloader();
 auth();
@@ -32,16 +33,8 @@ wow();
 blog();
 sidebarActiveClass();
 sidebarTransition();
-validation(); 
 tabs();
 
-// var inputs = labels.find('.login__input');
+// authForm();
 
-// inputs.focus(function(e) {
-//   $(this).addClass('login__input--focus');
-//   $(this).parent('.login__label').addClass('focus');
-// });
 
-// inputs.blur(function(e) {
-//   $(this).parent('.login__label').removeClass('focus');
-// });
