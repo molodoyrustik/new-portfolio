@@ -11,8 +11,3 @@ body
 	include ../common/popup.pug
 	<!-- / ========= svg ========= \ -->
 	include ../common/svg.pug
-
-	if NODE_ENV === 'production'
-		script(src='/js/main.min.js' defer)
-	else 
-		script(src='/js/main.js' defer)

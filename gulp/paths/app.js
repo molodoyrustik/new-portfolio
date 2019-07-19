@@ -1,3 +1,4 @@
-module.exports = [
-  './src/js/main.js'
-];
+module.exports = {
+  src: './src/js/',
+  bundles: ['main.js', 'admin.js']
+};

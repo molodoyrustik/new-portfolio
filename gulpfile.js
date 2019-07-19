@@ -1,4 +1,13 @@
+let isDevelopment = false
+console.log(process.env.NODE_ENV);
+if (process.env.NODE_ENV == 'development') {
+  isDevelopment = true;
+} else {
+  isDevelopment = false;
+}
+console.log(isDevelopment);
 global.$ = {
+  dev: isDevelopment,
   package: require('./package.json'),
   config: require('./gulp/config'),
   path: {
@@ -10,8 +19,17 @@ global.$ = {
   },
   gulp: require('gulp'),
   del: require('del'),
+  merge: require('merge-stream'),
+  browserify : require('browserify'),
+  source : require('vinyl-source-stream'),
+  buffer : require('vinyl-buffer'),
+  babel : require('babelify'),
   browserSync: require('browser-sync').create(),
-  gp: require('gulp-load-plugins')()
+  gp: require('gulp-load-plugins')({
+    rename: {
+      'gulp-replace-task': 'replaceTask'
+    }
+  })
 };
 
 $.path.tasks.forEach(function(taskPath) {
@@ -20,30 +38,27 @@ $.path.tasks.forEach(function(taskPath) {
 
 $.gulp.task('build', $.gulp.series(
   'clean',
+  'copy:root',
   'sprite.svg',
   'tinypng',
-  'webp',
   $.gulp.parallel(
-    'sass-prod',
+    'sass',
     'css.foundation',
-    'pug.prod',
-    'browserify',
-    // 'imagemin',
+    'pug',
+    'js.process',
     'copy.icons',
     'fonts'
   ),
 ));
 
-
 $.gulp.task('default', $.gulp.series(
   'clean',
   'sprite.svg',
-  // 'webp.dev',
   $.gulp.parallel(
     'sass',
     'css.foundation',
     'pug',
-    'browserify.dev',
+    'js.process',
     'copy.image',
     'fonts',
   ),

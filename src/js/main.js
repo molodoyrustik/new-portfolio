@@ -1,5 +1,4 @@
 const $ = require('jquery');
-
 const preloader = require('./modules/preloader');
 const blur = require('./modules/blur');
 const auth = require('./modules/auth');
